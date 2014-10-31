@@ -1,0 +1,9 @@
+<h1><%= @post.title %></h1>
+
+<p><%=@post.title%><br>
+   <%=@post.content%><br>
+</p>
+
+
+<%= link_to "Show All Posts", posts_path %>
+<%= link_to "Delete This Post", post_path(@post), :confirm => 'Are you sure?', :method => :delete %>
