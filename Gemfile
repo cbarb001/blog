@@ -39,4 +39,5 @@ gem 'spring',        group: :development
 
 gem 'mongoid', github: 'mongoid/mongoid'
 
+gem 'bcrypt', '~> 3.1.7'
 
