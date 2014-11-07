@@ -1,6 +1,10 @@
-<p>I'm a place holder page. I'm located in <%= users_path %> /index.html.erb </p>
-<% if @current_user != nil %>
-	<% @users.each do |u| %>
-		<%=u.posts.title%>
-	<% end %>
+<h1>user index</h1>
+<% if current_user  %>
+	<%= current_user.email%>
 <% end %>
+	
+<h1>Posts</h1><br>
+	
+<% if @user.id == post.user_id %>
+	hello		
+ <% end %>
