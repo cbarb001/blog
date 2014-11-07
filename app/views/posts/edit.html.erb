@@ -1,6 +1,8 @@
 <h1> Edit this post! </h1>
 
 <%= form_for @post do |f| %>
+
+	<%= f.hidden_field :post_id, :value => @post.id %>
 	Name: <%= f.text_field :title, placeholder: "title" %>
 	<%= f.text_field :content, placeholder: "content"%>
 	<%= f.submit "Edit post!" %>

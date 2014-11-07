@@ -6,12 +6,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   
 
-private
+
 
   def current_user
   	@current_user ||= User.where(id: session[:user_id].to_s).first
   end
   
+ 
 
   def authorize
   	redirect_to login_url, alert: "Not authorized" if current_user.nil?

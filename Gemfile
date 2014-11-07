@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'better_errors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -40,4 +41,6 @@ gem 'spring',        group: :development
 gem 'mongoid', github: 'mongoid/mongoid'
 
 gem 'bcrypt', '~> 3.1.7'
+
+gem 'rails_12factor'
 

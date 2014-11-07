@@ -1,10 +1,8 @@
 <h1>user index</h1>
-<% if current_user  %>
-	<%= current_user.email%>
-<% end %>
-	
-<h1>Posts</h1><br>
-	
-<% if @user.id == post.user_id %>
-	hello		
- <% end %>
+
+
+<% @users.each do |u| %>
+<%=current_user.id %>
+<%=@user.id %>
+<%end%>
+
