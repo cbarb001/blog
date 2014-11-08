@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
 gem 'better_errors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
