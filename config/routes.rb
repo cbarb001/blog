@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   #root 'posts#index'
 
-  get '/signup', to: 'users#new', as: 'signup'
-	get '/login', to: 'sessions#new', as: 'login'
-	get '/logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :sessions
   
   resources :users
 
@@ -25,6 +21,14 @@ Rails.application.routes.draw do
   patch  'posts/:id' =>       'posts#update'
 
   delete 'posts/:id' =>       'posts#destroy', as: :delete
+
+  controller :sessions do
+      get 'login' => :new
+      post 'login' => :create
+      delete 'logout' => :destroy
+   end
+
+   get 'sessions/' => 'sessions#index', as: :sessions
 
 
 end

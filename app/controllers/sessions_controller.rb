@@ -1,9 +1,14 @@
 class SessionsController < ApplicationController
-	
+	def index
+		@posts = Post.all
+		@users = User.all
+	end
 
 	def new
 		@user = User.new
 		@is_login = true
+		
+
 	end
 
 	def create
@@ -13,7 +18,7 @@ class SessionsController < ApplicationController
 		if user && user.authenticate(params[:password])
 			# sets the cookie to the browser
 			session[:user_id] = user.id.to_s
-			redirect_to root_url
+			redirect_to sessions_path
 		else
 			flash.now.alert = "Email or password is invalid"
 			render "new"
@@ -27,3 +32,5 @@ class SessionsController < ApplicationController
 		redirect_to root_url, :notice => "Logged out!"
 	end
 end
+
+
