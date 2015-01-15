@@ -8,11 +8,11 @@
 		@post = Post.new
 	end
 
-
+ 
 	def create 
 		@post = Post.new(params.require(:post).permit(:title, :content))
 		if @post.save
-			redirect_to users_path
+			redirect_to posts_path
 		else
 			render 'new'
 		end
